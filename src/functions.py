@@ -93,3 +93,29 @@ def total_score(answers: dict) -> int:
 
     return score
 
+
+def quiz() -> None:
+    """
+    Основная функция игры
+    """
+    words = get_dict_words(get_user_choice_level())
+    print(words)
+
+    for word, translate in words.items():
+        user_answer = role(f"{word}, {len(translate)} букв, начинается на {translate[0]}...", 2)
+
+        if clear_answer(user_answer) == translate.lower():
+            answers[word] = True
+            role(f"Верно, {word} - это {translate}.", 1)
+        else:
+            answers[word] = False
+            role(f"Неверно, {word} - это {translate}.", 1)
+
+        press_enter()
+
+    role("Правильно отвечены слова:", 1)
+    [print(key) for key, val in answers.items() if val]
+    role("Неправильно  отвечены слова:", 1)
+    [print(key) for key, val in answers.items() if not val]
+
+    role(f"Ваш ранг:\n{levels[total_score(answers)]}", 1)
