@@ -83,3 +83,13 @@ def clear_answer(answer: str) -> None:
     """
     clean_answer = answer.replace('.','').replace('!','').replace(',','')
     return clean_answer.strip().lower()
+
+
+def total_score(answers: dict) -> int:
+    """
+    Считает сумму все верных ответов
+    """
+    score = sum([1 for answer in answers.values() if answer])
+
+    return score
+
