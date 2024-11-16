@@ -31,3 +31,20 @@ def get_dict_words(difficult: str) -> dict:
         dict_words = json.load(file)
 
     return dict_words[difficult]
+
+
+def role(text: str = "", members: int = 2) -> None or str:
+    """
+    Возвращает ответ пользователя, если подразумевается ответ пользователя
+    """
+
+    progr = "Программа:"
+    user = "Пользователь:"
+
+    if members == 1:
+        print(f"{progr} {text} ")
+    elif members == 2:
+        print(f"{progr} {text} ")
+        user = input(f"{user} ")
+
+        return user
