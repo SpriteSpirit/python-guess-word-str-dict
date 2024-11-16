@@ -68,3 +68,18 @@ def get_user_choice_level() -> str:
         else:
             role(f"Выбран {user_choice} уровень сложности, мы предложим 5 слов, подберите перевод.", 1)
             return DIFFICULTY_LEVELS[user_choice]
+
+
+def press_enter() -> None:
+    """
+    Запрашивает у пользователя нажать Enter
+    """
+    role("Нажмите Enter для продолжения.", 2)
+
+
+def clear_answer(answer: str) -> None:
+    """
+    Очищает ответ пользователя от символов . , !
+    """
+    clean_answer = answer.replace('.','').replace('!','').replace(',','')
+    return clean_answer.strip().lower()
