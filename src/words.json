@@ -1,0 +1,23 @@
+{
+  "words_easy": {
+    "family": "семья",
+    "hand": "рука",
+    "people": "люди",
+    "evening": "вечер",
+    "minute": "минута"
+  },
+  "words_medium": {
+    "believe": "верить",
+    "feel": "чувствовать",
+    "make": "делать",
+    "open": "открывать",
+    "think": "думать"
+  },
+  "words_hard": {
+    "rural": "деревенский",
+    "fortune": "удача",
+    "exercise": "упражнение",
+    "suggest": "предлагать",
+    "except": "кроме"
+  }
+}
