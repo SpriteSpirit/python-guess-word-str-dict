@@ -16,7 +16,7 @@ DIFFICULTY_LEVELS = {
     "сложный": "words_hard",
 }
 
-WORDS_FILE = 'words.json'
+WORDS_FILE = 'src/words.json'
 
 answers = {}
 
@@ -99,7 +99,6 @@ def quiz() -> None:
     Основная функция игры
     """
     words = get_dict_words(get_user_choice_level())
-    print(words)
 
     for word, translate in words.items():
         user_answer = role(f"{word}, {len(translate)} букв, начинается на {translate[0]}...", 2)
